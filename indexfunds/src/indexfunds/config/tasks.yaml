@@ -1,0 +1,39 @@
+index_news_task:
+  description: >
+    Scrape the latest financial news headlines and summarize those that directly affect {topic}. 
+    Focus on investor sentiment, market volatility, geopolitical impacts, and sector-wide developments.
+  expected_output: >
+    A concise summary of recent news impacting {topic}, highlighting any sentiment indicators, 
+    key headlines, or shifts in investor behavior.
+
+index_macro_task:
+  description: >
+    Analyze macroeconomic indicators such as inflation, unemployment, GDP growth, and interest rates 
+    relevant to the country or region in which {topic} is based.
+  expected_output: >
+    A summary of the macroeconomic outlook and how current economic conditions are influencing {topic}. 
+    Include data points, trends, and notable economic reports.
+
+index_technical_task:
+  description: >
+    Perform technical analysis of the {topic} index using indicators such as moving averages (SMA/EMA), 
+    RSI, MACD, and trendline support/resistance.
+  expected_output: >
+    A technical summary of the current trend direction (bullish, bearish, neutral) of {topic}, 
+    along with specific chart patterns or signals that support the outlook.
+
+index_research_task:
+  description: >
+    Combine historical performance data, macroeconomic context, and major events affecting {topic}. 
+    Identify long-term investment trends and market positioning.
+  expected_output: >
+    A comprehensive overview of how recent developments (economic and geopolitical) align with the 
+    long-term trajectory of {topic}.
+
+index_summary_task:
+  description: >
+    Based on inputs from the macroeconomic, technical, research, and news analyses, 
+    decide whether this week is a good time to BUY or SELL {topic}.
+  expected_output: >
+    A final recommendation in the form of BUY or SELL. Include a supporting summary that 
+    integrates findings from all other agents and explains the rationale for the decision.
