@@ -1,7 +1,10 @@
 # IndexFundAdvisor
 "Intelligent Financial Advisory Chatbot: AI-Driven Investment Insights for Index Funds Using CrewAI"
 
-disini ada file src dan knowlegde
+disini ada file src dan knowledge
+
+cara install requirements ke vscode:
+use the command pip install -r requirements. txt in your terminal.
 
 VSCode Setup:
 1. download indexfunds folder diatas
