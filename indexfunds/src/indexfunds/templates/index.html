@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Index Advisor Chatbot</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <h1>📈 Index Advisor Chatbot</h1>
+  <form id="chat-form">
+    <input type="text" id="user-input" placeholder="Ask about SRI-KEHATI or S&P500..." required />
+    <button type="submit">Ask</button>
+  </form>
+
+  <div id="output-container">
+    <div>
+      <h2>🧠 Thinking Process (only for troubleshooting)</h2>
+      <pre id="log-output"></pre>
+    </div>
+    <div>
+      <h2>✅ Final Answer</h2>
+      <pre id="answer-output"></pre>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("chat-form");
+    const userInput = document.getElementById("user-input");
+    const logOutput = document.getElementById("log-output");
+    const answerOutput = document.getElementById("answer-output");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      logOutput.textContent = "Thinking...";
+      answerOutput.textContent = "";
+
+      const response = await fetch("/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question: userInput.value })
+      });
+
+      const result = await response.json();
+      logOutput.textContent = result.thinking;
+      answerOutput.innerHTML = result.answer;
+    });
+  </script>
+</body>
+</html>

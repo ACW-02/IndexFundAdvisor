@@ -1,0 +1,65 @@
+# index_news_task:
+#   description: >
+#     Scrape the latest financial news headlines and summarize those that directly affect {topic}. 
+#     Focus on investor sentiment, market volatility, geopolitical impacts, and sector-wide developments.
+#   expected_output: >
+#     A concise summary of recent news impacting {topic}, highlighting any sentiment indicators, 
+#     key headlines, or shifts in investor behavior.
+
+index_news_task:
+  description: > 
+    Analyze recent news about the {topic}index 
+    and summarize its potential market impact.
+  expected_output: >
+    "A brief report summarizing key news stories 
+    and their relevance to the {topic}"
+
+index_macro_task:
+  description: >
+    Analyze macroeconomic indicators such as inflation, unemployment, GDP growth, and interest rates 
+    relevant to the country or region in which {topic} is based.
+  expected_output: >
+    A summary of the macroeconomic outlook and how current economic conditions are influencing {topic}. 
+    Include data points, trends, and notable economic reports.
+
+# index_technical_task:
+#   description: >
+#     Perform technical analysis of the {topic} index using indicators such as moving averages (SMA/EMA), 
+#     RSI, MACD, and trendline support/resistance.
+#   expected_output: >
+#     A technical summary of the current trend direction (bullish, bearish, neutral) of {topic}, 
+#     along with specific chart patterns or signals that support the outlook.
+
+index_technical_task:
+  description: >
+    Use the IndexTechnicalTool to fetch technical indicators for {topic}.
+    Specifically, obtain the 20-day Simple Moving Average (SMA), the Relative Strength Index (RSI 14), and the current closing price.
+    After collecting the metrics, provide an interpretation of the market condition:
+    - Is the price above or below the SMA (bullish or bearish trend)?
+    - Is the RSI overbought (>70), oversold (<30), or neutral?
+  expected_output: >
+    📊 Technical Metrics for {topic}:
+    - Current Price: XXXX
+    - 20-Day SMA: XXXX
+    - RSI (14): XXXX
+
+    📈 Interpretation:
+    The current price is [above/below] the 20-day SMA, indicating a [bullish/bearish] trend.
+    The RSI value of XX suggests the market is [overbought/oversold/neutral], implying [momentum analysis here].
+
+
+index_research_task:
+  description: >
+    Combine historical performance data, macroeconomic context, and major events affecting {topic}. 
+    Identify long-term investment trends and market positioning.
+  expected_output: >
+    A comprehensive overview of how recent developments (economic and geopolitical) align with the 
+    long-term trajectory of {topic}.
+
+index_summary_task:
+  description: >
+    Based on inputs from the macroeconomic, technical, research, and news analyses, 
+    decide whether this week is a good time to BUY, SELL, or KEEP {topic}.
+  expected_output: >
+    A final recommendation in the form of BUY or SELL or KEEP. Include a supporting summary that 
+    integrates findings from all other agents and explains the rationale for the decision.
