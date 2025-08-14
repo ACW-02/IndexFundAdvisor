@@ -1,0 +1,5 @@
+Index,topic,CP,CR,RR,FF,NS,prediction
+^GSPC,is the SNP500(^GSPC) good to buy in july 2024 to october 2024?,0.92066,1.0,0.71559,1.0,0.42857,KEEP
+^N225,is the FTSE 100 (^FTSE) good to buy in january 2025 to june 2025?,1.0,1.0,0.92507,0.8,0.1,BUY
+^DJI,is the Nikkei 225 (^N225) good to buy in january 2025 to june 2025?,1.0,1.0,0.89844,0.8,0.1,BUY
+^IXIC,is the NASDAQ Composite (^IXIC) good to buy in january 2025 to june 2025?,0.97377,1.0,0.92266,0.90909,0.18182,BUY
